@@ -5,11 +5,15 @@ export interface IScoreBoard {
   bestScore: number;
 }
 
-const Scoreboard = ({ currentScore, bestScore }: IScoreBoard) => {
+interface Props extends IScoreBoard {
+  className?: string;
+}
+
+const Scoreboard = ({ currentScore, bestScore, className }: Props) => {
   return (
-    <div>
-      <p>Score: {currentScore}</p>
-      <p>Best Score: {bestScore}</p>
+    <div className={`flex gap-4 justify-center p-2 ${className}`}>
+      <p className="text-white text-xl">Score: {currentScore}</p>
+      <p className="text-white text-xl">Best Score: {bestScore}</p>
     </div>
   );
 };
