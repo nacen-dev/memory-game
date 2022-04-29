@@ -12,8 +12,8 @@ interface Props extends IScoreBoard {
 const Scoreboard = ({ currentScore, bestScore, className }: Props) => {
   return (
     <div className={`flex gap-4 justify-center p-2 ${className}`}>
-      <p className="text-white text-xl">Score: {currentScore}</p>
-      <p className="text-white text-xl">Best Score: {bestScore}</p>
+      <p className="text-xl">Score: {currentScore}</p>
+      <p className="text-xl">Best Score: {bestScore}</p>
     </div>
   );
 };
