@@ -64,6 +64,7 @@ const MemoryGame = (props: Props) => {
       <Scoreboard
         bestScore={scores.bestScore}
         currentScore={scores.currentScore}
+        className="text-white"
       />
       <div className="p-2">
         <p className="text-white text-center">
