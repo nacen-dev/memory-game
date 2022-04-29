@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { cardsData } from "../cardsData";
 import { Card, ICard } from "./Card";
 import { IScoreBoard, Scoreboard } from "./Scoreboard";
@@ -12,6 +12,21 @@ const MemoryGame = (props: Props) => {
     currentScore: 0,
     bestScore: 0,
   });
+
+  useEffect(() => {
+    let localStorageScoresData: IScoreBoard | string | null =
+      localStorage.getItem("memory-game-scores");
+    if (localStorageScoresData) {
+      localStorageScoresData = JSON.parse(
+        localStorageScoresData
+      ) as IScoreBoard;
+
+      setScores({
+        currentScore: 0,
+        bestScore: localStorageScoresData.bestScore,
+      });
+    }
+  }, []);
 
   const shuffleCards = () => {
     const tempCards = [...cards];
@@ -57,6 +72,7 @@ const MemoryGame = (props: Props) => {
         )
       );
     }
+    localStorage.setItem("memory-game-scores", JSON.stringify(scores));
   };
 
   return (
@@ -68,7 +84,7 @@ const MemoryGame = (props: Props) => {
       />
       <div className="p-2">
         <p className="text-white text-center">
-          Test your memory and get a score by clicking on an image that you have
+          Test your memory and get a score by clicking on the poke that you have
           not clicked before
         </p>
       </div>
