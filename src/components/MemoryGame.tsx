@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { cardsData } from "../cardsData";
 import { Card, ICard } from "./Card";
-import { IScoreBoard } from "./Scoreboard";
+import { IScoreBoard, Scoreboard } from "./Scoreboard";
 
 interface Props {}
 
@@ -60,17 +60,29 @@ const MemoryGame = (props: Props) => {
   };
 
   return (
-    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 p-4 bg-slate-700">
-      {cards.map((card) => (
-        <Card
-          imgURL={card.imgURL}
-          text={card.text}
-          className="cursor-pointer bg-yellow-300"
-          handleClick={() => cardClicked(card.text, card.clicked)}
-          clicked={card.clicked}
-          key={card.text}
-        />
-      ))}
+    <div className="bg-slate-500">
+      <Scoreboard
+        bestScore={scores.bestScore}
+        currentScore={scores.currentScore}
+      />
+      <div className="p-2">
+        <p className="text-white text-center">
+          Test your memory and get a score by clicking on an image that you have
+          not clicked before
+        </p>
+      </div>
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 p-4 bg-slate-700">
+        {cards.map((card) => (
+          <Card
+            imgURL={card.imgURL}
+            text={card.text}
+            className="cursor-pointer bg-yellow-300"
+            handleClick={() => cardClicked(card.text, card.clicked)}
+            clicked={card.clicked}
+            key={card.text}
+          />
+        ))}
+      </div>
     </div>
   );
 };
