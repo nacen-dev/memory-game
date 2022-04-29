@@ -72,12 +72,12 @@ const MemoryGame = (props: Props) => {
           not clicked before
         </p>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 p-4 bg-slate-700">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-6 p-4 bg-slate-700">
         {cards.map((card) => (
           <Card
             imgURL={card.imgURL}
             text={card.text}
-            className="cursor-pointer bg-yellow-300"
+            className="cursor-pointer bg-yellow-300 hover:scale-110 transition-transform duration-300"
             handleClick={() => cardClicked(card.text, card.clicked)}
             clicked={card.clicked}
             key={card.text}
