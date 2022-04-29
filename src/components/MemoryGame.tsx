@@ -19,8 +19,23 @@ const MemoryGame = (props: Props) => {
     },
   });
 
-  const cardSelect = (cardText: string) => {
-    
+  const shuffleCards = () => {
+    const tempCards = [...memoryState.cards];
+    for (let i = tempCards.length - 1; i > 0; i--) {
+      let randomIndex = Math.floor(Math.random() * (i + 1));
+      [tempCards[i], tempCards[randomIndex]] = [
+        tempCards[randomIndex],
+        tempCards[i],
+      ];
+    }
+
+    setMemoryState((prevState: MemoryGameState) => ({
+      ...prevState,
+      cards: tempCards
+    }));
+  };
+
+  const cardClicked = (selected: boolean) => {
   };
 
   return (
@@ -30,7 +45,7 @@ const MemoryGame = (props: Props) => {
           imgURL={card.imgURL}
           text={card.text}
           className="cursor-pointer bg-yellow-300"
-          handleClick={() => cardSelect(card.text)}
+          handleClick={() => cardClicked(card.clicked)}
           clicked={card.clicked}
         />
       ))}
