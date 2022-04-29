@@ -28,6 +28,12 @@ const MemoryGame = (props: Props) => {
     }
   }, []);
 
+  useEffect(() => {
+    if (scores.bestScore !== 0) {
+      localStorage.setItem("memory-game-scores", JSON.stringify(scores));
+    }
+  }, [scores]);
+
   const shuffleCards = () => {
     const tempCards = [...cards];
     for (let i = tempCards.length - 1; i > 0; i--) {
@@ -72,7 +78,6 @@ const MemoryGame = (props: Props) => {
         )
       );
     }
-    localStorage.setItem("memory-game-scores", JSON.stringify(scores));
   };
 
   return (
