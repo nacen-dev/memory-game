@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/memory-game/static/css/main.861afa7a.css",
+    "main.js": "/memory-game/static/js/main.bc5fa44c.js",
+    "static/js/787.69b12325.chunk.js": "/memory-game/static/js/787.69b12325.chunk.js",
+    "static/media/240px-009Blastoise.png": "/memory-game/static/media/240px-009Blastoise.c30996ef6ce4c213be8e.png",
+    "static/media/240px-003Venusaur.png": "/memory-game/static/media/240px-003Venusaur.a8fee2d0de8c61d147a0.png",
+    "static/media/240px-888Zacian.png": "/memory-game/static/media/240px-888Zacian.c13a3beafdaae37ff56f.png",
+    "static/media/240px-336Seviper.png": "/memory-game/static/media/240px-336Seviper.4d3f3a43b8bb9011b04f.png",
+    "static/media/240px-384Rayquaza.png": "/memory-game/static/media/240px-384Rayquaza.35b74c22667f2a75d542.png",
+    "static/media/240px-461Weavile.png": "/memory-game/static/media/240px-461Weavile.ed54b850c9c09440d7e0.png",
+    "static/media/240px-214Heracross.png": "/memory-game/static/media/240px-214Heracross.cc24dbd55e41d6459c53.png",
+    "static/media/240px-376Metagross.png": "/memory-game/static/media/240px-376Metagross.840c4a150ff3a1d7f34a.png",
+    "static/media/240px-823Corviknight.png": "/memory-game/static/media/240px-823Corviknight.dab75af816165f3a7adb.png",
+    "static/media/240px-059Arcanine.webp": "/memory-game/static/media/240px-059Arcanine.6913cb7c54f2f99236ee.webp",
+    "static/media/240px-770Palossand.png": "/memory-game/static/media/240px-770Palossand.ba2f4c799d70a34dd231.png",
+    "static/media/240px-604Eelektross.png": "/memory-game/static/media/240px-604Eelektross.47e24806dfd8e8a07e6a.png",
+    "static/media/240px-473Mamoswine.webp": "/memory-game/static/media/240px-473Mamoswine.ce6eb53a095cc581a61a.webp",
+    "static/media/240px-248Tyranitar.webp": "/memory-game/static/media/240px-248Tyranitar.ca02c4994c6bafbc72f0.webp",
+    "static/media/240px-094Gengar.webp": "/memory-game/static/media/240px-094Gengar.831577231274871d5b9a.webp",
+    "static/media/240px-865Sirfetchd.png": "/memory-game/static/media/240px-865Sirfetchd.5a9746149e437d1d40a3.png",
+    "static/media/240px-143Snorlax.webp": "/memory-game/static/media/240px-143Snorlax.c651a8af5aa97c9acb01.webp",
+    "static/media/240px-282Gardevoir.webp": "/memory-game/static/media/240px-282Gardevoir.7f2056554b1562956b7e.webp",
+    "index.html": "/memory-game/index.html",
+    "main.861afa7a.css.map": "/memory-game/static/css/main.861afa7a.css.map",
+    "main.bc5fa44c.js.map": "/memory-game/static/js/main.bc5fa44c.js.map",
+    "787.69b12325.chunk.js.map": "/memory-game/static/js/787.69b12325.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.861afa7a.css",
+    "static/js/main.bc5fa44c.js"
+  ]
+}
