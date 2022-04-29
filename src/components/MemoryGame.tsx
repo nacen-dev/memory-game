@@ -26,7 +26,25 @@ const MemoryGame = (props: Props) => {
     setCards(tempCards);
   };
 
-  const cardClicked = (selected: boolean) => {
+  const resetScores = () => {
+    setScores((prevScore) => ({
+      bestScore: prevScore.bestScore,
+      currentScore: 0,
+    }));
+  };
+
+  const incrementScores = () => {
+    setScores((prevScores) => ({
+      currentScore: prevScores.currentScore + 1,
+      bestScore:
+        prevScores.currentScore + 1 > prevScores.bestScore
+          ? prevScores.currentScore + 1
+          : prevScores.bestScore,
+    }));
+  };
+
+  const cardClicked = (text: string, selected: boolean) => {
+   
     shuffleCards();
   };
 
@@ -37,7 +55,7 @@ const MemoryGame = (props: Props) => {
           imgURL={card.imgURL}
           text={card.text}
           className="cursor-pointer bg-yellow-300"
-          handleClick={() => cardClicked(card.clicked)}
+          handleClick={() => cardClicked(card.text, card.clicked)}
           clicked={card.clicked}
         />
       ))}
