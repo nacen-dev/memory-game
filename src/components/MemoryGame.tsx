@@ -44,8 +44,19 @@ const MemoryGame = (props: Props) => {
   };
 
   const cardClicked = (text: string, selected: boolean) => {
-   
     shuffleCards();
+
+    if (selected) {
+      resetScores();
+      setCards(cardsData);
+    } else {
+      incrementScores();
+      setCards((prevCards) =>
+        prevCards.map((card) =>
+          card.text === text ? { ...card, clicked: true } : card
+        )
+      );
+    }
   };
 
   return (
@@ -57,6 +68,7 @@ const MemoryGame = (props: Props) => {
           className="cursor-pointer bg-yellow-300"
           handleClick={() => cardClicked(card.text, card.clicked)}
           clicked={card.clicked}
+          key={card.text}
         />
       ))}
     </div>
